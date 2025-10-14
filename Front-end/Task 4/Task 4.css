@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: white;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+  padding: 120px 30px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Menu Section */
+.menu-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 30px;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #240b36;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.pizza-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 3px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pizza-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #c31432 0%, #240b36 100%);
+}
+
+.pizza-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border-color: #c31432;
+}
+
+.pizza-content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.pizza-icon {
+  font-size: 80px;
+  flex-shrink: 0;
+}
+
+.pizza-info {
+  flex: 1;
+}
+
+.pizza-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #c31432;
+}
+
+.pizza-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.price-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 600;
+  color: #240b36;
+}
+
+.order-btn {
+  background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.order-btn:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #240b36 0%, #c31432 100%);
+  color: white;
+  padding: 40px 30px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffd700;
+}
+
+/* Floating Order Button */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+  color: white;
+  padding: 18px 25px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  z-index: 99;
+  transition: transform 0.3s;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}

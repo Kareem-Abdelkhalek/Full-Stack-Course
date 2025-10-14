@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brewhouse Café</title>
+    <link rel="stylesheet" href="Task 5.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <h1>BREWHOUSE CAFÉ</h1>
+      <p>Artisan Coffee Since 2025</p>
+      <p style="font-size: 1rem">Where Every Cup Tells a Story</p>
+    </header>
+
+    <!-- Menu Section -->
+    <div class="container">
+      <h2 class="section-title">Our Signature Drinks</h2>
+
+      <div class="menu-grid">
+        <!-- Featured Item using span -->
+        <div class="menu-item featured">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800"
+            alt="Espresso"
+          />
+          <div class="menu-item-content">
+            <h3>Classic Espresso</h3>
+            <p>
+              Rich and bold, our signature espresso is crafted from premium
+              Ethiopian beans. A perfect start to your day with notes of dark
+              chocolate and caramel.
+            </p>
+            <span class="price">$4.50</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img
+            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600"
+            alt="Latte"
+          />
+          <div class="menu-item-content">
+            <h3>Vanilla Latte</h3>
+            <p>Smooth espresso with steamed milk and vanilla syrup.</p>
+            <span class="price">$5.25</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img
+            src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=600"
+            alt="Cappuccino"
+          />
+          <div class="menu-item-content">
+            <h3>Cappuccino</h3>
+            <p>Perfect balance of espresso, steamed milk, and foam.</p>
+            <span class="price">$4.75</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img
+            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600"
+            alt="Mocha"
+          />
+          <div class="menu-item-content">
+            <h3>Mocha</h3>
+            <p>Rich chocolate meets espresso perfection.</p>
+            <span class="price">$5.50</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Justify-Self Demo Section -->
+    <section class="justify-demo">
+      <div class="container">
+        <h2 class="section-title">Coffee Presentation Styles</h2>
+
+        <div class="demo-grid">
+          <div class="demo-cell">
+            <div class="demo-box justify-start">START</div>
+          </div>
+          <div class="demo-cell">
+            <div class="demo-box justify-center">CENTER</div>
+          </div>
+          <div class="demo-cell">
+            <div class="demo-box justify-end">END</div>
+          </div>
+        </div>
+
+        <div class="explanation">
+          <h4>What is justify-self?</h4>
+          <p>
+            The <strong>justify-self</strong> property controls the horizontal
+            alignment of an element within its grid cell. In the demonstration
+            above, you can see three coffee boxes positioned differently within
+            their cells. The first box uses <code>justify-self: start</code> to
+            align to the left edge, the middle box uses
+            <code>justify-self: center</code> to center horizontally, and the
+            last box uses <code>justify-self: end</code>
+            to align to the right edge. This property only affects the
+            individual item, not the entire grid. Think of it like choosing
+            where to place your coffee cup on a serving tray - left side,
+            center, or right side.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Align-Self Demo Section -->
+    <section class="align-demo">
+      <div class="container">
+        <h2 class="section-title">Coffee Service Heights</h2>
+
+        <div class="align-grid">
+          <div class="align-cell">
+            <div class="demo-box align-start">TOP</div>
+          </div>
+          <div class="align-cell">
+            <div class="demo-box align-center">MIDDLE</div>
+          </div>
+          <div class="align-cell">
+            <div class="demo-box align-end">BOTTOM</div>
+          </div>
+        </div>
+
+        <div class="explanation">
+          <h4>What is align-self?</h4>
+          <p>
+            The <strong>align-self</strong> property controls the vertical
+            alignment of an element within its grid cell. In the demonstration
+            above, you can see three coffee boxes positioned at different
+            vertical positions. The first box uses
+            <code>align-self: start</code> to align to the top, the middle box
+            uses <code>align-self: center</code> to center vertically, and the
+            last box uses <code>align-self: end</code>
+            to align to the bottom of its cell. This is particularly useful when
+            grid cells have different heights. Imagine stacking coffee cups on
+            shelves - you can choose whether to place them at the top shelf,
+            middle shelf, or bottom shelf. This property gives you precise
+            vertical control over individual items in your grid layout.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Visit Us</h3>
+          <p>123 Coffee Street</p>
+          <p>Downtown, City 12345</p>
+          <p>Open Daily: 7AM - 9PM</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Phone: +(20) 123-4567-90</p>
+          <p>Email: hello@brewhouse.com</p>
+          <p>Instagram: @brewhouse.cafe</p>
+        </div>
+        <div>
+          <h3>About</h3>
+          <p>
+            Brewhouse Café is dedicated to serving the finest artisan coffee
+            using sustainable practices and premium beans from around the world.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Solution</title>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter username"
+        required
+      />
+
+      <br /><br />
+
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="pass" required />
+
+      <br /><br />
+
+      <label for="mail">Email:</label>
+      <input
+        type="email"
+        id="mail"
+        name="mail"
+        placeholder="example@mail.com"
+        required
+      />
+
+      <br /><br />
+
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{11}"
+        placeholder="01234567890"
+        required
+      />
+
+      <br /><br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <br /><br />
+
+      <label for="favColor">Favorite Color:</label>
+      <input type="color" id="favColor" name="favColor" />
+
+      <br /><br />
+
+      <p>Gender:</p>
+      <label
+        ><input type="radio" name="gender" value="male" required /> Male</label
+      >
+      <label><input type="radio" name="gender" value="female" /> Female</label>
+
+      <br /><br />
+
+      <label>
+        <input type="checkbox" name="subscribe" /> Subscribe to newsletter
+      </label>
+
+      <br /><br />
+
+      <label for="profilePic">Upload Profile Picture:</label>
+      <input type="file" id="profilePic" name="profilePic" accept="image/*" />
+
+      <br /><br />
+
+      <label for="city">City:</label>
+      <select id="city" name="city" required>
+        <option value="">-- Select City --</option>
+        <option value="giza">Giza</option>
+        <option value="cairo">Cairo</option>
+      </select>
+
+      <br /><br />
+
+      <label for="message">Message:</label><br />
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        cols="30"
+        required
+      ></textarea>
+
+      <br /><br />
+
+      <h3>Team Members</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="fullname1" required /></td>
+
+            <td><input type="email" name="email1" required /></td>
+
+            <td>
+              <input type="number" name="age1" min="1" max="100" required />
+            </td>
+          </tr>
+          <tr>
+            <td><input type="text" name="fullname2" /></td>
+            <td><input type="email" name="email2" /></td>
+            <td><input type="number" name="age2" min="1" max="100" /></td>
+          </tr>
+
+          <tr>
+            <td><input type="text" name="fullname3" /></td>
+            <td><input type="email" name="email3" /></td>
+            <td><input type="number" name="age3" min="1" max="100" /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br /><br />
+
+      <label for="browser">Choose a browser:</label>
+      <input list="browsers" id="browser" name="browser" />
+
+      <datalist id="browsers">
+        <option value="Safari"></option>
+        <option value="Edge"></option>
+        <option value="Chrome"></option>
+      </datalist>
+
+      <br /><br />
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
