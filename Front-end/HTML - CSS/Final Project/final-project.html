@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3a0ca3;
+        --accent-color: #f72585;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --gray-color: #6c757d;
+        --gradiant: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --transition: all 0.8s ease;
+        --border-radius: 8px;
+        --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        --font-heading: "arial", sans-serif;
+      }
+
+      /* reset and base style */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--dark-color);
+        background: var(--light-color);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      /*header*/
+      header {
+        background: var(--gradiant);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /*navigation bar */
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 1.5rem;
+      }
+
+      nav ul li a {
+        padding: 0.5rem 0;
+        position: relative;
+        transition: var(--transition);
+      }
+
+      nav ul li a:hover {
+        color: #ffcc00;
+      }
+
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ffcc00;
+        transition: var(--transition);
+      }
+
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      /*main content*/
+      main {
+        margin-top: 70px;
+      }
+
+      section {
+        padding: 5rem o;
+      }
+
+      section:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      /* hero section*/
+      .hero {
+        background: url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+          no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        padding: 8rem 0;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .hero .container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: bold;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: var(--box-shadow);
+      }
+
+      .btn:hover {
+        background: #d9046d;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      /*About section */
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-image {
+        flex: 1;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+      }
+
+      .about-image:hover {
+        transform: scale(1.03);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* skills section */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .skill-card {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        transition: var(--transition);
+      }
+
+      .skill-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .skill-card i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <div class="container">
+        <div class="logo">my protfolio</div>
+
+        <nav>
+          <ul id="navbar">
+            <li><a href="#home">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">skills</a></li>
+            <li><a href="#protfolio">protfolio</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--main section-->
+    <main>
+      <!--hero section-->
+      <section id="home" class="hero">
+        <div class="container">
+          <h1 class="text-shadow">hello, iam john doe</h1>
+          <p class="text-shadow">
+            Frontend Developer and Creative Web Designer. I enjoy turning ideas
+            into amazing digital experiences.
+          </p>
+          <a href="#protfolio" class="btn pulse">view my work</a>
+        </div>
+      </section>
+
+      <!--about section-->
+      <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                I'm a passionate frontend developer with a strong focus on
+                design and development. I have over 3 years of experience
+                creating interactive and engaging websites.
+              </p>
+              <p class="special-text">
+                I continuously work on improving my skills and learning modern
+                technologies to ensure I deliver the best solutions for my
+                clients.
+              </p>
+              <blockquote>
+                Creativity is intelligence having fun - Albert Einstein
+              </blockquote>
+            </div>
+            <div class="about-image">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                alt="Profile Picture"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--skills section-->
+      <section id="skills">
+        <div class="container">
+          <h2>my skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <i class="fab fa-html5 rotate-icon"></i>
+              <h3>HTML5</h3>
+              <p>Structuring web content using the latest HTML5 standards</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-css3-alt"></i>
+              <h3>CSS3</h3>
+              <p>
+                Designing and styling web pages using CSS3, Flexbox and Grid
+              </p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-js"></i>
+              <h3>JavaScript</h3>
+              <p>Adding interactivity and dynamism to websites</p>
+            </div>
+            <div class="skill-card">
+              <i class="fab fa-react floating"></i>
+              <h3>React</h3>
+              <p>Developing complex user interfaces using React library</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
