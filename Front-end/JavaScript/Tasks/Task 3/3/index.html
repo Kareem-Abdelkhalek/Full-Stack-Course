@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 3 - Toggle Buttons</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .container {
+        background: white;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 20px;
+      }
+
+      .btn {
+        padding: 20px 40px;
+        font-size: 18px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background: white;
+        color: #333;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: #f0f0f0;
+      }
+
+      .btn.active {
+        background: #667eea;
+        color: white;
+        border-color: #667eea;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Button Toggle</h1>
+      <div class="button-group">
+        <button class="btn" onclick="toggleButton(0)">Button 1</button>
+        <button class="btn" onclick="toggleButton(1)">Button 2</button>
+        <button class="btn" onclick="toggleButton(2)">Button 3</button>
+      </div>
+    </div>
+
+    <script>
+      function toggleButton(index) {
+        let buttons = document.querySelectorAll(".btn");
+
+        for (let i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove("active");
+        }
+
+        buttons[index].classList.add("active");
+      }
+    </script>
+  </body>
+</html>

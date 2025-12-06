@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1 - Array Swap</title>
+  </head>
+  <body>
+    <h1>Task 1 - Check Console (F12)</h1>
+
+    <script>
+      // Task 1: Array Swap Problem - Detailed Explanation
+
+      let arr = [10, 20, 30, 40, 50];
+      console.log("Original array:", arr);
+
+      console.log("\n=== WRONG WAY ===");
+      let wrongArr = [10, 20, 30, 40, 50];
+
+      console.log("Before swap:");
+      console.log("wrongArr[0] =", wrongArr[0]); // 10
+      console.log("wrongArr[4] =", wrongArr[4]); // 50
+
+      wrongArr[0] = wrongArr[4]; // now wrongArr[0] becomes 50
+      console.log("\nAfter: wrongArr[0] = wrongArr[4]");
+      console.log("wrongArr[0] =", wrongArr[0]); // 50 (the value 10 is GONE!)
+      console.log("wrongArr[4] =", wrongArr[4]); // 50
+
+      wrongArr[4] = wrongArr[0]; // copying 50 to 50 (not 10!)
+      console.log("\nAfter: wrongArr[4] = wrongArr[0]");
+      console.log("wrongArr[0] =", wrongArr[0]); // 50
+      console.log("wrongArr[4] =", wrongArr[4]); // 50
+
+      console.log("\nFinal wrong result:", wrongArr);
+      console.log("Problem: Both are 50! The value 10 disappeared!");
+
+      console.log("\n\n=== CORRECT WAY ===");
+      let correctArr = [10, 20, 30, 40, 50];
+
+      console.log("Before swap:");
+      console.log("correctArr[0] =", correctArr[0]); // 10
+      console.log("correctArr[4] =", correctArr[4]); // 50
+
+      let temp = correctArr[0]; // SAVE the value 10 in temp
+      console.log("\nStep 1: temp = correctArr[0]");
+      console.log("temp =", temp); // 10 is saved!
+
+      correctArr[0] = correctArr[4]; // now correctArr[0] becomes 50
+      console.log("\nStep 2: correctArr[0] = correctArr[4]");
+      console.log("correctArr[0] =", correctArr[0]); // 50
+      console.log("temp =", temp); // 10 is still saved!
+
+      correctArr[4] = temp; // put the saved value (10) in correctArr[4]
+      console.log("\nStep 3: correctArr[4] = temp");
+      console.log("correctArr[4] =", correctArr[4]); // 10
+
+      console.log("\nFinal correct result:", correctArr);
+      console.log("Success: Values swapped correctly!");
+
+      console.log("\n\n=== WHY IT HAPPENS ===");
+      console.log("Wrong way: When you write wrongArr[0] = wrongArr[4]");
+      console.log("You replace the value 10 with 50");
+      console.log("The computer doesn't remember the old value 10");
+      console.log("So when you write wrongArr[4] = wrongArr[0]");
+      console.log("You're copying 50 (not 10) because 10 is already lost!");
+      console.log("\nCorrect way: temp variable saves the value 10");
+      console.log("So even after wrongArr[0] becomes 50");
+      console.log("We still have 10 saved in temp");
+      console.log("Then we can put it back in wrongArr[4]");
+    </script>
+  </body>
+</html>
